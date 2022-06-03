@@ -4,7 +4,7 @@ from odoo.exceptions import UserError
 class AccountMoveLine(models.Model):
     _inherit = 'account.invoice.line'
 
-    editable_price_total = fields.Float(string="Edited Amount", default=0.0)
+    editable_price_total = fields.Float(string="Editable Amount", default=0.0)
 
 
     @api.onchange('editable_price_total', 'quantity')
