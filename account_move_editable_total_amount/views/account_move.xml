@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="editable_total_view_move_form_inherit" model="ir.ui.view">
+            <field name="name">Editable Total Inherit Invoice Form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="before">
+                    <field name="editable_price_total"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
